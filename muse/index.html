@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muse</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            display: flex;
+        }
+        .menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 200px;
+            background-color: #1d1d1d;
+            padding: 10px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        }
+        .menu img {
+            width: 100%;
+            margin-bottom: 10px;
+            background-color: rgb(35, 173, 236);
+        }
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        .search-container {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            background-color: #f1f1f1;
+            padding: 10px;
+            text-align: center;
+        }
+        .search-container input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .search-container button {
+            padding: 10px;
+            background-color: #ecca30;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .top-right-logo {
+            position: absolute;
+            top: 30px;
+            right: 200px;
+            width: 5%;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <a href="home.html"><img src="casa.PNG" alt="Imagem 1"></a>
+        <a href="stars.html"><img src="estrela.PNG" alt="Imagem 2"></a>
+        <a href="add.html"><img src="adicionar.PNG" alt="Imagem 3"></a>
+    </div>
+
+    <div class="search-container">
+        <input type="text" placeholder="Digite sua pesquisa...">
+        <button>Pesquisar</button>
+    </div>
+    <div style="margin-top: 50px;">
+        <!--Conteúdo-->
+    </div>
+    <img src="logo.png" alt="Logo legal" class="top-right-logo"> <!-- Logo no canto direito superior -->
+    <div class="container">
+        <header>
+            <h1>Muse</h1>
+        </header>
+        <main>
+            <section class="now-playing">
+                <h2>Now Playing</h2>
+                <div class="player">
+                    <img src="cover.jpg" alt="Album Cover" class="cover">
+                    <div class="info">
+                        <h3 class="title">Song Title</h3>
+                        <p class="artist">Artist Name</p>
+                    </div>
+                    <div class="controls">
+                        <button id="prev">Prev</button>
+                        <button id="play">Play</button>
+                        <button id="next">Next</button>
+                    </div>
+                </div>
+            </section>
+            <section class="most-listened">
+                <h2>Most Listened</h2>
+                <ul id="most-listened-list">
+                    <!-- Songs will be dynamically added here -->
+                </ul>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
